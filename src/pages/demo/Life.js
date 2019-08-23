@@ -1,5 +1,6 @@
 import React from 'react'
 import Child from './Child'
+import {Button} from 'antd'
 import './index.less'
 
 export default class Life extends React.Component { //ES6中增加了类的概念，其实ES5中已经可以实现类的功能了，只不过使用Class实现可以更加清晰，更像面向对象的写法。
@@ -35,6 +36,7 @@ export default class Life extends React.Component { //ES6中增加了类的概�
         // 注意：组件必要函数，不能在函数内使用setState改变状态机。
         return <div className="content">
             <p>React生命周期介绍</p>
+            <Button onClick={this.headleAdd}>AntD点击一下</Button>
             <button onClick={this.headleAdd}>点击一下</button>
             <button onClick={this.headleClick.bind(this)}>点击一下</button>
             <p>{this.state.count}</p>
